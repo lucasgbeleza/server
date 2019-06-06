@@ -26,11 +26,13 @@ class CoolFuncionarioController {
     }
 
     private boolean isCool (Funcionario func) {
-        return func.getName().equals("José Maria") ||
-                func.getName().equals("Lucas") ||
-                func.getName().equals("Murilo") ||
-                func.getName().equals("Raian") ||
-                func.getName().equals("Thiago");
+        // return func.getName().equals("José Maria") ||
+        //         func.getName().equals("Lucas") ||
+        //         func.getName().equals("Murilo") ||
+        //         func.getName().equals("Raian") ||
+        //         func.getName().equals("Thiago");
+
+        return true;
     }
 
 }

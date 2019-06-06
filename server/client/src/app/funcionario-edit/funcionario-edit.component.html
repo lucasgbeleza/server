@@ -1,0 +1,23 @@
+<mat-card>
+  <form #funcionarioForm="ngForm" (ngSubmit)="save(funcionarioForm.value)">
+    <mat-card-header>
+      <mat-card-title><h2>{{funcionario.name ? 'Edit' : 'Add'}} Funcionario</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <input type="hidden" name="href" [(ngModel)]="funcionario.href">
+      <mat-form-field>
+        <input matInput placeholder="Funcionario:" [(ngModel)]="funcionario.name"
+               required name="name" #name>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit"
+              [disabled]="!funcionarioForm.form.valid">Save</button>
+      <button mat-raised-button color="secondary" (click)="remove(funcionario.href)"
+              *ngIf="funcionario.href" type="button">Delete</button>
+      <a mat-button routerLink="/funcionario-list">Cancel</a>
+    </mat-card-actions>
+    <mat-card-footer>
+    </mat-card-footer>
+  </form>
+</mat-card>

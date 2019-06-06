@@ -1,11 +1,18 @@
-<p>
+<mat-card>
+<mat-card-title>
   funcionario-list works!
-</p>
+  <h1>Lista de funcionarios</h1>
+</mat-card-title>
+<mat-card-content>
+  <mat-list>
+      <mat-list-item *ngFor="let func of funcionarios" >
+        <h3 mat-line>
+          {{func.name}}, {{func.salario}}
+        </h3>
+        <a mat-button [routerLink]="['/funcionario-edit', func.id]">Edit</a>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
 
-<h1>Lista de funcionarios</h1>
-
-<ul *ngFor="let func of funcionarios" >
-  <li>  
-    {{func.name}}, {{func.salario}}
-  </li>
-</ul>
+  <button mat-fab color="primary" [routerLink] = "['/funcionario-add']">Add</button>
+</mat-card>
