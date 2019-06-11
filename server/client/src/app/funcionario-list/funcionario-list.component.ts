@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FuncionarioService } from '../shared/funcionario/funcionario.service';
+import { FuncionarioService } from '../shared/funcionario/funcionario.service';
 
 @Component({
   selector: 'app-funcionario-list',

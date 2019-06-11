@@ -4,17 +4,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FuncionarioListComponent } from './funcionario-list/funcionario-list.component';
-import { MatButtonModule, MatCardModule, MatInputModule, MatToolbarModule, MatCard, MatListModule } from "@angular/material";
+import { MatButtonModule, MatCardModule, MatInputModule, MatToolbarModule, MatCard, MatListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FuncionarioEditComponent } from './funcionario-edit/funcionario-edit.component';
 import { FormsModule } from '@angular/forms';
+import { XseedComponent } from './xseed/xseed.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FuncionarioListComponent,
-    FuncionarioEditComponent
+    FuncionarioEditComponent,
+    XseedComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     MatListModule,
     MatToolbarModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

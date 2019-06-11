@@ -1,12 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+import { DragDropModule } from "@angular/cdk/drag-drop";
 
 @Injectable({
   providedIn: 'root'
 })
 export class FuncionarioService {
   
+@Input() text
+
   public API = '//localhost:8080';
   public FUNC_API = this.API + '/funcionarios';
 

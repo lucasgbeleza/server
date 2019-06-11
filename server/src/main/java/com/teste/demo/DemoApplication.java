@@ -19,7 +19,7 @@ public class DemoApplication {
 		return args -> {
 			Stream.of("José Maria", "Lucas", "Murilo", "Raian", "Thiago").forEach(name -> {
 				Funcionario func = new Funcionario();
-				func.setName(name);
+				func.setName(name.toUpperCase());
 				repository.save(func); 
 			});
 			repository.findAll().forEach(System.out::println);
